@@ -1,0 +1,18 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <h2 class="form-title">Welcome, {{ user.username }}!</h2>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Dashboard</h5>
+            <p class="card-text">You are now logged in.</p>
+            <div class="d-grid gap-2">
+                <a href="{% url 'profile' %}" class="btn btn-outline-primary">View Profile</a>
+                <a href="{% url 'password_change' %}" class="btn btn-outline-secondary">Change Password</a>
+                <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

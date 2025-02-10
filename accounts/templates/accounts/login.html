@@ -1,0 +1,14 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<h2 class="form-title">Login</h2>
+<form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Login</button>
+    <div class="text-center mt-3">
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+        <p><a href="{% url 'password_reset' %}">Forgot Password?</a></p>
+    </div>
+</form>
+{% endblock %}
