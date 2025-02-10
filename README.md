@@ -27,6 +27,5 @@
 - Logout option available
 
 ## Notes
-- Uses Django's built-in authentication system and class-based views
 - Minimal styling (focus on functionality)
 - Development email backend (prints password reset emails to console)
